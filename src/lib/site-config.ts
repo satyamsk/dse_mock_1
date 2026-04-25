@@ -98,10 +98,10 @@ export const NAV: { label: string; href: string; children?: { label: string; hre
 ];
 
 export const TICKER_ITEMS = [
-  "📢 Admissions Open — MBA-IB Batch 2026–28",
+  "Admissions Open — MBA-IB Batch 2026–28",
   "Shortlisted Candidates for GDPI Announced",
   "Placement Report 2025 Now Available",
   "Synergy 2026 — Annual B-School Fest",
   "Erudition 2025 — 28th Annual Business Convention",
-  "🥇 1st Place — Brand Aficionado, IIM Visakhapatnam",
+  "1st Place — Brand Aficionado, IIM Visakhapatnam",
 ];
