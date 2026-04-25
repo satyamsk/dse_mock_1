@@ -50,7 +50,7 @@ export function PageHero({
             {italic && (
               <>
                 {" "}
-                <em className="text-maroon font-normal">{italic}</em>
+                <span className="text-maroon">{italic}</span>
               </>
             )}
           </h1>

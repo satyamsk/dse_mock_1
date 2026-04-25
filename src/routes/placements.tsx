@@ -40,7 +40,7 @@ function Placements() {
         <div className="container-page space-y-16">
           <Reveal>
             <SectionHeading overline="Class of 2025">
-              Final Placement <em className="text-maroon font-normal">Highlights</em>
+              Final Placement <span className="text-maroon">Highlights</span>
             </SectionHeading>
           </Reveal>
 
@@ -50,7 +50,7 @@ function Placements() {
 
           <Reveal>
             <SectionHeading overline="Recruiters">
-              Brands That Hire from <em className="text-maroon font-normal">DSE MBA-IB</em>
+              Brands That Hire from <span className="text-maroon">DSE MBA-IB</span>
             </SectionHeading>
             <p className="text-[15px] text-muted-foreground mt-5 max-w-xl">
               A snapshot of the {data.summary.totalRecruiters}+ organisations that have recruited from MBA-IB across recent batches.
@@ -62,7 +62,7 @@ function Placements() {
 
           <Reveal>
             <SectionHeading overline="Roles">
-              What Our Students <em className="text-maroon font-normal">Do.</em>
+              What Our Students <span className="text-maroon">Do.</span>
             </SectionHeading>
           </Reveal>
           <Reveal>
@@ -76,7 +76,7 @@ function Placements() {
         <div className="container-page">
           <Reveal>
             <SectionHeading overline="Annual Reports">
-              Download the <em className="text-maroon font-normal">Official Reports</em>
+              Download the <span className="text-maroon">Official Reports</span>
             </SectionHeading>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6 mt-12">
@@ -113,7 +113,7 @@ function Placements() {
           <Reveal>
             <Overline className="!text-white/70 [&::before]:!bg-white/40 justify-center">For Recruiters</Overline>
             <h2 className="font-display text-[clamp(28px,4vw,42px)] font-bold mt-5 leading-tight">
-              Recruit from India's <em className="text-maroon-mid font-normal">Most Selective</em><br />Commerce Programme.
+              Recruit from India's <span className="text-maroon-mid">Most Selective</span><br />Commerce Programme.
             </h2>
             <p className="text-[16px] text-white/75 max-w-2xl mx-auto mt-6 leading-relaxed">
               Connect with our Corporate Relations Team to schedule campus visits, summer internships, and final placements.

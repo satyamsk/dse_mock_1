@@ -24,11 +24,13 @@ export function SiteHeader() {
       >
         <div className="container-wide flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-3 group">
-            <span className="w-11 h-11 rounded-full bg-maroon text-white font-display font-bold text-base flex items-center justify-center shrink-0">
-              IB
-            </span>
+            <img
+              src="https://static.wixstatic.com/media/7fc140_85ea09cda4e24d5dae3df6e11c7a1e44~mv2.png/v1/fill/w_88,h_88,al_c,q_85/7fc140_85ea09cda4e24d5dae3df6e11c7a1e44~mv2.png"
+              alt="MBA-IB DSE Logo"
+              className="w-11 h-11 object-contain shrink-0"
+            />
             <span className="hidden sm:flex flex-col leading-tight">
-              <span className="font-display font-bold text-[18px] text-maroon tracking-tight">
+              <span className="font-display font-bold text-[17px] text-maroon tracking-tight">
                 MBA (IB)
               </span>
               <span className="text-[9px] font-medium text-muted-foreground uppercase tracking-[2.5px] mt-0.5">

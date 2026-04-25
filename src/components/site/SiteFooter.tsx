@@ -74,9 +74,11 @@ export function SiteFooter() {
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-5">
-              <span className="w-12 h-12 rounded-full border-2 border-white/20 bg-maroon text-white font-display font-bold flex items-center justify-center">
-                IB
-              </span>
+              <img
+                src="https://static.wixstatic.com/media/7fc140_85ea09cda4e24d5dae3df6e11c7a1e44~mv2.png/v1/fill/w_96,h_96,al_c,q_85/7fc140_85ea09cda4e24d5dae3df6e11c7a1e44~mv2.png"
+                alt="MBA-IB DSE Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <div className="font-display font-bold text-xl text-white">MBA (IB)</div>
                 <div className="text-[10px] uppercase tracking-[2.5px] text-white/50">
