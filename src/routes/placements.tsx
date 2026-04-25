@@ -4,6 +4,7 @@ import { PlacementCharts, RecruiterMarquee, RolesGrid } from "@/components/site/
 import { Reveal, Overline, SectionHeading } from "@/components/site/Primitives";
 import { Btn } from "@/components/site/Btn";
 import { Download, Award } from "lucide-react";
+import { PHOTOS } from "@/lib/site-config";
 import data from "@/data/placements.json";
 
 export const Route = createFileRoute("/placements")({
@@ -34,6 +35,7 @@ function Placements() {
         italic="The World's Boardrooms."
         subtitle="Year after year, MBA-IB students secure positions at the country's and world's most respected organisations — consulting, finance, FMCG, tech, and more."
         breadcrumb={[{ label: "Placements" }]}
+        bgImage={PHOTOS.department}
       />
 
       <section className="py-16">

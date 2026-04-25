@@ -105,3 +105,19 @@ export const TICKER_ITEMS = [
   "Erudition 2025 — 28th Annual Business Convention",
   "1st Place — Brand Aficionado, IIM Visakhapatnam",
 ];
+
+/** Curated authentic photos from DSE's official Wix media bucket */
+export const PHOTOS = {
+  /** Batch group photo — used as hero background */
+  batchGroup:
+    "https://static.wixstatic.com/media/7fc140_4ddd35fc86e44fef858ecfbb010eb84e~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85/Batch_2_edited.jpg",
+  /** DSE campus front / department building */
+  campus:
+    "https://static.wixstatic.com/media/7fc140_8b68aa2dd56547b287ce96f0a28ccb88~mv2.jpg/v1/fill/w_1200,h_640,al_c,q_85/7fc140_8b68aa2dd56547b287ce96f0a28ccb88~mv2.jpg",
+  /** Classic DSE building shot — used for sub-page hero bg */
+  department:
+    "https://static.wixstatic.com/media/7fc140_a6889de2e80a47669b0a4e06e67106e9~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/7fc140_a6889de2e80a47669b0a4e06e67106e9~mv2.jpg",
+  /** Erudition 2025 event — campus life */
+  erudition:
+    "https://static.wixstatic.com/media/7fc140_eabc4b1632234b2ab1727a2f5513206a~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/7fc140_eabc4b1632234b2ab1727a2f5513206a~mv2.jpg",
+} as const;

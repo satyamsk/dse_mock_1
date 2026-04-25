@@ -69,7 +69,7 @@ const FOOTER_COLS = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-footer text-white/85 mt-24">
+    <footer className="bg-footer text-white/85">
       <div className="container-wide py-16">
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-4">

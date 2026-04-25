@@ -4,7 +4,7 @@ import { Reveal, Overline, SectionHeading } from "@/components/site/Primitives";
 import { Btn } from "@/components/site/Btn";
 import { RecruiterMarquee } from "@/components/site/PlacementCharts";
 import { MapEmbed } from "@/components/site/MapEmbed";
-import { SITE } from "@/lib/site-config";
+import { SITE, PHOTOS } from "@/lib/site-config";
 import { ArrowRight, Download } from "lucide-react";
 
 export const Route = createFileRoute("/")(
@@ -27,9 +27,6 @@ export const Route = createFileRoute("/")(
   component: Home,
 });
 
-const HERO_PHOTO =
-  "https://static.wixstatic.com/media/7fc140_a6889de2e80a47669b0a4e06e67106e9~mv2.jpg/v1/fill/w_1200,h_900,al_c,q_85/7fc140_a6889de2e80a47669b0a4e06e67106e9~mv2.jpg";
-
 const WHY = [
   { title: "Global Curriculum", body: "International trade, finance, strategy, and cross-border management — built for the world stage, rooted in academic rigour." },
   { title: "Unmatched Placements", body: "100% placement record. Consulting, FMCG, finance, and global MNCs recruit from our campus year after year." },
@@ -40,74 +37,81 @@ const WHY = [
 function Home() {
   return (
     <div>
-      {/* HERO */}
-      <section className="grid lg:grid-cols-[52%_48%] min-h-[100svh] pt-20">
-        <div className="bg-cream flex flex-col justify-center px-6 md:px-10 lg:pl-16 lg:pr-20 py-14 lg:py-20 relative z-10">
+      {/* ─── HERO — Full-bleed batch photo background ─── */}
+      <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <img
+          src={PHOTOS.batchGroup}
+          alt="MBA-IB Batch — Delhi School of Economics"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Gradient overlay — dark left for readability, transparent right to show photo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25" />
+        {/* Bottom vignette for stats bar */}
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/70 to-transparent" />
+
+        <div className="container-page relative z-10 pt-28 pb-32 lg:max-w-[55%]">
           <Reveal>
-            <span className="inline-flex items-center gap-2 bg-maroon-light text-maroon px-4 py-1.5 text-[11px] font-semibold tracking-[2px] uppercase border border-maroon/15 mb-6">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-1.5 text-[11px] font-semibold tracking-[2px] uppercase border border-white/20 mb-6">
               Admissions Open · Batch 2026–28
             </span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="font-display font-bold leading-[1.06] text-[clamp(38px,5.5vw,62px)] tracking-tight text-ink mb-5">
+            <h1 className="font-display font-bold leading-[1.06] text-[clamp(38px,5.5vw,64px)] tracking-tight text-white mb-5">
               Where India's Brightest{" "}
-              <span className="text-maroon">Business Minds</span>{" "}
+              <span className="text-maroon-mid">Business Minds</span>{" "}
               Are Forged.
             </h1>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="text-[16px] text-muted-foreground leading-[1.75] max-w-[480px] mb-8">
+            <p className="text-[16px] text-white/75 leading-[1.75] max-w-[480px] mb-8">
               A two-year full-time MBA programme at the Department of Commerce, Delhi School of Economics — shaping global business leaders since 1967.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-wrap gap-3 mb-0">
               <Btn href={SITE.applicationPortal} variant="solid" external>
                 Apply for 2026–28
               </Btn>
-              <Btn to="/placements" variant="ghost">
+              <Btn to="/placements" variant="white">
                 See Placements
               </Btn>
             </div>
           </Reveal>
-          <Reveal delay={0.12}>
-            <div className="grid grid-cols-2 md:grid-cols-4 border-t border-border pt-6 max-w-xl">
-              {[
-                { n: "1967", l: "Established" },
-                { n: "100%", l: "Placement Record" },
-                { n: "30 LPA", l: "Highest CTC" },
-                { n: "60+", l: "Top Recruiters" },
-              ].map((s, i) => (
-                <div
-                  key={s.l}
-                  className={`px-4 first:pl-0 ${i < 3 ? "border-r border-border" : ""}`}
-                >
-                  <div className="font-display font-bold text-[26px] text-maroon leading-none">
-                    {s.n}
-                  </div>
-                  <div className="text-[10px] uppercase tracking-[1.5px] text-muted-foreground mt-1.5 leading-tight">
-                    {s.l}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
-        <div className="relative hidden lg:block overflow-hidden">
-          <img src={HERO_PHOTO} alt="Delhi School of Economics campus" className="w-full h-full object-cover" />
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-cream to-transparent pointer-events-none" />
-          <div className="absolute bottom-10 left-8 bg-cream/95 backdrop-blur border border-border p-5 max-w-[210px]">
-            <div className="font-display font-bold text-[38px] text-maroon leading-none">57+</div>
-            <div className="text-[11px] uppercase tracking-[1.5px] text-muted-foreground mt-1">
-              Years of Academic Excellence
-            </div>
+
+        {/* Stats bar pinned to bottom */}
+        <div className="absolute inset-x-0 bottom-0 z-10">
+          <div className="container-page">
+            <Reveal delay={0.12}>
+              <div className="grid grid-cols-2 md:grid-cols-4 border-t border-white/20 py-6 max-w-2xl">
+                {[
+                  { n: "1967", l: "Established" },
+                  { n: "100%", l: "Placement Record" },
+                  { n: "30 LPA", l: "Highest CTC" },
+                  { n: "60+", l: "Top Recruiters" },
+                ].map((s, i) => (
+                  <div
+                    key={s.l}
+                    className={`px-4 first:pl-0 ${i < 3 ? "border-r border-white/20" : ""}`}
+                  >
+                    <div className="font-display font-bold text-[26px] text-white leading-none">
+                      {s.n}
+                    </div>
+                    <div className="text-[10px] uppercase tracking-[1.5px] text-white/50 mt-1.5 leading-tight">
+                      {s.l}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       <Ticker />
 
-      {/* ABOUT */}
+      {/* ─── ABOUT ─── */}
       <section className="py-16 md:py-20" id="about">
         <div className="container-page grid lg:grid-cols-2 gap-14 items-start">
           <Reveal>
@@ -134,7 +138,7 @@ function Home() {
           </Reveal>
           <Reveal delay={0.1} className="relative pb-14">
             <div className="relative">
-              <img src={HERO_PHOTO} alt="DSE Campus" className="w-full h-[420px] object-cover" />
+              <img src={PHOTOS.campus} alt="DSE Campus" className="w-full h-[420px] object-cover" />
               <div className="absolute -bottom-3 -right-3 w-[60%] h-[60%] border-2 border-maroon -z-10" />
             </div>
             <div className="absolute -bottom-10 -left-6 bg-white border-t-[3px] border-maroon shadow-xl p-6 w-[270px] z-10">
@@ -165,7 +169,7 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* ─── WHY CHOOSE US ─── */}
       <section className="py-16 md:py-20 bg-[#F4EFEF]">
         <div className="container-page">
           <Reveal>
@@ -189,7 +193,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ADMISSIONS */}
+      {/* ─── ADMISSIONS ─── */}
       <section className="py-16 md:py-20" id="admissions">
         <div className="container-page grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-start">
           <Reveal>
@@ -263,7 +267,7 @@ function Home() {
         </div>
       </section>
 
-      {/* PLACEMENTS */}
+      {/* ─── PLACEMENTS ─── */}
       <section className="py-16 md:py-20 bg-[#F4EFEF]" id="placements">
         <div className="container-page">
           <div className="grid md:grid-cols-[1fr_auto] items-end gap-8 mb-10">
@@ -328,9 +332,18 @@ function Home() {
         </div>
       </section>
 
-      {/* CAMPUS LIFE */}
-      <section className="bg-footer text-white py-16 md:py-20">
-        <div className="container-page grid lg:grid-cols-2 gap-14 items-center">
+      {/* ─── CAMPUS LIFE ─── */}
+      <section className="relative text-white py-16 md:py-20 overflow-hidden">
+        {/* Real event photo as background */}
+        <img
+          src={PHOTOS.erudition}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/50" />
+
+        <div className="container-page relative z-10 grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
             <Overline className="!text-white/70 [&::before]:!bg-white/40">Campus Life</Overline>
             <h2 className="font-display text-[clamp(30px,4.5vw,46px)] font-bold leading-[1.1] tracking-tight mt-5">
@@ -358,7 +371,7 @@ function Home() {
                 <Link
                   key={c.t}
                   to={c.h}
-                  className="bg-white/[0.04] hover:bg-maroon border border-white/10 hover:border-maroon p-4 transition-colors group"
+                  className="bg-white/[0.06] hover:bg-maroon/80 border border-white/10 hover:border-maroon p-4 transition-colors group backdrop-blur-sm"
                 >
                   <div className="font-display text-lg font-bold text-white">{c.t}</div>
                   <div className="text-[11.5px] text-white/60 group-hover:text-white/85 mt-0.5">{c.s}</div>
@@ -369,7 +382,7 @@ function Home() {
         </div>
       </section>
 
-      {/* CONTACT + MAP */}
+      {/* ─── CONTACT + MAP ─── */}
       <section className="py-16 md:py-20" id="contact">
         <div className="container-page">
           <Reveal>

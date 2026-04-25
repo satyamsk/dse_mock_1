@@ -50,7 +50,13 @@ export function ContentPage({
   const heroPara = data.paragraphs[0] || subtitle || "";
   const bodyParas = data.paragraphs.slice(1, 16);
   const sectionHeadings = data.headings.filter(
-    (h) => h.length > 4 && h.length < 120 && !h.toLowerCase().includes("menu"),
+    (h) =>
+      h.length > 4 &&
+      h.length < 120 &&
+      !h.toLowerCase().includes("menu") &&
+      !h.toLowerCase().includes("follow us") &&
+      !h.includes("​") &&
+      !/^\(\d{4}/.test(h),
   ).slice(0, 8);
 
   return (
@@ -85,12 +91,12 @@ export function ContentPage({
               {bodyParas.length > 0 ? (
                 bodyParas.map((p, i) => (
                   <Reveal key={i} delay={i * 0.04}>
-                    <p className="text-[16.5px] text-ink-2/85 leading-[1.85] font-serif">{p}</p>
+                    <p className="text-[16.5px] text-ink-2/85 leading-[1.85]">{p}</p>
                   </Reveal>
                 ))
               ) : (
                 <Reveal>
-                  <p className="text-[16.5px] text-ink-2/85 leading-[1.85] font-serif">
+                  <p className="text-[16.5px] text-ink-2/85 leading-[1.85]">
                     Detailed content for this page will be updated shortly. In the meantime, you can
                     refer to the original page or get in touch with the Department of Commerce
                     directly.
@@ -170,9 +176,7 @@ export function ContentPage({
               </div>
             </div>
 
-            <Btn href={data.url} variant="ghost" external className="!w-full justify-center">
-              View Original Page
-            </Btn>
+
           </aside>
         </div>
       </section>
