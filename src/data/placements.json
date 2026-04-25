@@ -1,0 +1,154 @@
+{
+  "lastUpdated": "2025",
+  "summary": {
+    "highestCTC": 30.0,
+    "averageCTC": 13.92,
+    "medianCTC": 15.17,
+    "top25Percentile": 18.99,
+    "top50Percentile": 17.62,
+    "placementRate": 100,
+    "ppoOffered": 16,
+    "batchSize": 80,
+    "workExPercent": 77,
+    "totalRecruiters": 60
+  },
+  "reports": [
+    {
+      "year": 2025,
+      "title": "Placement Report 2025",
+      "description": "Complete placement data, roles, and recruiters for the 2024–2026 batch.",
+      "url": "https://www.dsembaib.in/_files/ugd/7fc140_c903ffe84abb4aabacf506eb27862ec0.pdf",
+      "image": "https://static.wixstatic.com/media/7fc140_32d52113c72244008c1c5bdb290036f0~mv2.png"
+    },
+    {
+      "year": 2024,
+      "title": "Placement Report 2024",
+      "description": "Final placement data for the 2022–2024 graduating batch of MBA-IB at DSE.",
+      "url": "https://www.dsembaib.in/_files/ugd/7fc140_ab71de2dabba400ba01f5f384124d0d5.pdf",
+      "image": null
+    }
+  ],
+  "finalPlacementSectors": [
+    { "name": "Consulting", "value": 31, "color": "var(--maroon)" },
+    { "name": "Banking & Finance", "value": 36, "color": "var(--maroon-mid)" },
+    { "name": "Sales & Marketing", "value": 15, "color": "var(--chart-3)" },
+    { "name": "Others", "value": 11, "color": "var(--chart-4)" },
+    { "name": "IT & Analytics", "value": 7, "color": "var(--chart-5)" }
+  ],
+  "summerInternshipSectors": [
+    { "name": "Sales & Marketing", "value": 45 },
+    { "name": "Banking & Finance", "value": 28 },
+    { "name": "Operations", "value": 11 },
+    { "name": "Others", "value": 11 },
+    { "name": "IT & Analytics", "value": 5 }
+  ],
+  "summerStipend": {
+    "highest": 170000,
+    "average": 62700,
+    "median": 40000
+  },
+  "academicBackground": [
+    { "name": "Commerce & Management", "value": 24 },
+    { "name": "Engineering", "value": 42 },
+    { "name": "Humanities", "value": 16 },
+    { "name": "Science", "value": 16 },
+    { "name": "Others", "value": 2 }
+  ],
+  "professionalBackground": [
+    { "name": "IT", "value": 52 },
+    { "name": "Banking", "value": 10 },
+    { "name": "Manufacturing", "value": 14 },
+    { "name": "Consulting", "value": 5 },
+    { "name": "Edtech", "value": 10 },
+    { "name": "Others", "value": 10 }
+  ],
+  "ctcTrend": [
+    { "year": "2021", "highest": 22.0, "average": 11.5, "median": 12.0 },
+    { "year": "2022", "highest": 24.5, "average": 12.4, "median": 13.1 },
+    { "year": "2023", "highest": 27.0, "average": 13.1, "median": 14.0 },
+    { "year": "2024", "highest": 28.5, "average": 13.5, "median": 14.6 },
+    { "year": "2025", "highest": 30.0, "average": 13.92, "median": 15.17 }
+  ],
+  "rolesByDomain": {
+    "Consulting": [
+      "Consultant",
+      "Senior Associate",
+      "Business Analyst",
+      "Associate Consultant",
+      "Tech Consultant",
+      "Risk Consultant",
+      "Strategy Consultant"
+    ],
+    "Finance": [
+      "Investment Strategy",
+      "Accounts Manager",
+      "Liability Sales",
+      "Credit Manager",
+      "Asset Manager",
+      "Equity Manager",
+      "Relationship Manager"
+    ],
+    "Marketing": [
+      "Product Manager",
+      "Direct Marketing",
+      "Brand Manager",
+      "Sales Associate",
+      "Exports Manager"
+    ],
+    "IT / Analytics": [
+      "Management Trainee",
+      "Product Manager",
+      "Project Manager",
+      "Data Analyst",
+      "Data Scientist",
+      "Project Coordinator"
+    ]
+  },
+  "topRecruiters": [
+    "McKinsey & Company",
+    "Bain & Company",
+    "Deloitte",
+    "EY",
+    "KPMG",
+    "PwC",
+    "Accenture Strategy",
+    "Amazon",
+    "Google",
+    "Microsoft",
+    "Hindustan Unilever",
+    "Marico",
+    "ITC",
+    "Nestlé",
+    "P&G",
+    "Asian Paints",
+    "Aditya Birla Group",
+    "Tata Group",
+    "ICICI Bank",
+    "HDFC Bank",
+    "Yes Bank",
+    "Axis Bank",
+    "Kotak Mahindra Bank",
+    "Bajaj Finserv",
+    "Goldman Sachs",
+    "JP Morgan",
+    "Morgan Stanley",
+    "Nomura",
+    "Wipro",
+    "Infosys",
+    "TCS",
+    "BCG",
+    "ZS Associates",
+    "Tiger Analytics",
+    "Fractal",
+    "Mu Sigma"
+  ],
+  "functionRadar": [
+    { "function": "Strategy", "value": 85 },
+    { "function": "Marketing", "value": 78 },
+    { "function": "Finance", "value": 92 },
+    { "function": "Analytics", "value": 70 },
+    { "function": "Sales", "value": 65 },
+    { "function": "Operations", "value": 58 },
+    { "function": "Consulting", "value": 95 }
+  ]
+}

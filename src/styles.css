@@ -1,0 +1,219 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────────────────────
+   DSE MBA-IB Design System
+   Editorial · Maroon · Cream · Playfair Display + DM Sans
+   ───────────────────────────────────────────────────────────── */
+
+@theme inline {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-maroon: var(--maroon);
+  --color-maroon-dark: var(--maroon-dark);
+  --color-maroon-light: var(--maroon-light);
+  --color-maroon-mid: var(--maroon-mid);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-footer: var(--footer);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+}
+
+:root {
+  /* brand */
+  --maroon: oklch(0.4 0.15 25);
+  --maroon-dark: oklch(0.32 0.13 25);
+  --maroon-light: oklch(0.96 0.018 25);
+  --maroon-mid: oklch(0.55 0.14 25);
+  --cream: oklch(0.985 0.005 80);
+  --ink: oklch(0.18 0.01 270);
+  --ink-2: oklch(0.32 0.01 270);
+  --footer: oklch(0.16 0.04 25);
+
+  /* semantic */
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--maroon);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.012 25);
+  --secondary-foreground: var(--maroon);
+  --muted: oklch(0.94 0.008 80);
+  --muted-foreground: oklch(0.5 0.015 270);
+  --accent: var(--maroon-light);
+  --accent-foreground: var(--maroon);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.88 0.01 30);
+  --input: oklch(0.88 0.01 30);
+  --ring: var(--maroon);
+
+  /* charts — maroon-led palette */
+  --chart-1: oklch(0.4 0.15 25);
+  --chart-2: oklch(0.55 0.14 25);
+  --chart-3: oklch(0.7 0.1 50);
+  --chart-4: oklch(0.5 0.08 60);
+  --chart-5: oklch(0.65 0.05 30);
+  --chart-6: oklch(0.35 0.06 25);
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--maroon);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .container-page {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .container-wide {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-wide {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  .overline {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--maroon);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .overline::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--maroon);
+  }
+
+  .rule-maroon {
+    width: 48px;
+    height: 2px;
+    background: var(--maroon);
+  }
+
+  .ticker-anim {
+    animation: ticker 42s linear infinite;
+  }
+  .marquee-anim {
+    animation: ticker 55s linear infinite;
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .blink-dot {
+    animation: blink 1.4s infinite;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+  }
+}
